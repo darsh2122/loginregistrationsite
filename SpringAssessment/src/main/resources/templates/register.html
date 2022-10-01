@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style-login.css"/>
+</head>
+<body>
+<div th:insert="index :: headerFragment"></div>
+
+<div class="login-box">
+    <h2> Registration Form </h2>
+    <form th:action="@{/processEmployee}" method="post" th:object="${employee}">
+        <div class="user-box">
+                <input type="text" th:field="*{username}" required>
+                <label><b>Username</b></label>
+
+                <input type="password" th:field="*{password}" required>
+                <label><b>Password</b></label>
+
+                <input type="text" th:field="*{job_Title}">
+                <label><b>Job Title</b></label>
+
+                <input type="number" th:field="*{salary} ">
+                <label><b>Salary</b></label>
+        </div>
+
+        <div id="button-form">
+            <input type="submit" value="Register" class="submit"></input>
+            <span th:text="${error}"></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>

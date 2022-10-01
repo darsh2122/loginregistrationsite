@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="style-login.css"/>
+</head>
+
+<body>
+<div class="login-box">
+    <h2>Welcome!</h2>
+    <div th:fragment="headerFragment" class="button-form">
+        <a th:href="@{/register}" class="submit"> Register Here </a>
+        <a th:href="@{/login}" class="submit"> Log-in </a>
+        <a th:href="@{/}" class="submit">Home </a>
+    </div>
+</div>
+</body>
+</html>

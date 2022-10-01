@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.links{
+    padding: 30px;
+}
+body{
+    background: cadetblue;
+}
+
+h1,div,h2 {
+    text-align: center;
+}
